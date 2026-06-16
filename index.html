@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beneath The Solvent Sky</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Courier+Prime:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+  <div id="begin-screen">
+  <button id="begin-btn">Begin</button>
+</div>
+
+  <div id="canvas-container"></div>
+  <div id="scroll-driver"><div id="scroll-spacer"></div></div>
+  <div id="narrative"><div id="text-block"></div></div>
+
+  <div id="scroll-indicator">
+    <div class="scroll-label">scroll to traverse the stars</div>
+    <div class="scroll-arrow">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="scroll-caret">↓</div>
+  </div>
+
+  <!-- Spring Demo -->
+<div id="spring-overlay">
+  <div id="spring-instructions"></div>
+  <div id="spring-timer"></div>
+  <div id="spring-keybanner"></div>  <!-- ← direct child of overlay -->
+</div>
+
+<!-- Earth Objects -->
+<div id="earth-overlay">
+  <canvas id="earth-canvas"></canvas>
+  <div id="earth-spin-counter">
+    <span id="earth-spin-label">0 SPINS OF EARTH</span>
+  </div>
+  <div id="earth-hint"><p>HOVER TO EXPLORE</p></div>
+  <div id="earth-info">
+    <div id="earth-info-title"></div>
+    <div id="earth-info-body"></div>
+  </div>
+  <div id="earth-timesup">
+    <p id="earth-timesup-line1"></p>
+    <p id="earth-timesup-line2"></p>
+  </div>
+</div>
+
+  <!-- Final Choice -->
+  <div id="choice-overlay">
+    <div id="choice-question"></div>
+    <div id="choice-buttons">
+      <button class="choice-btn no-btn" id="btn-no">NO</button>
+      <button class="choice-btn yes-btn" id="btn-yes">I DO</button>
+    </div>
+  </div>
+
+  <!-- No Ending -->
+  <div id="no-ending">
+    <div id="no-seraph-text"></div>
+  </div>
+
+  <!-- Yes Ending: Warp / Tear -->
+  <div id="supernova-overlay">
+    <canvas id="supernova-canvas"></canvas>
+  </div>
+
+  <!-- Title Card -->
+ <div id="title-card">
+  <img src="/TitleThemeTwo.png" alt="Beneath the Solvent Sky" id="title-card-img" />
+  <button id="title-return-btn">Return</button>
+</div>
+
+  <!-- Global fade overlay -->
+  <div id="scene-fade"></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
